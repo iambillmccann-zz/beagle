@@ -1,21 +1,59 @@
-import { StatusBar } from 'expo-status-bar';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  configureFonts,
+  DefaultTheme,
+  Provider as PaperProvider,
+} from 'react-native-paper';
+import Splash from './components/splash';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const fontConfig = {
+  default: {
+    regular: {
+      fontFamily: 'Poppins-Regular',
+      fontWeight: 'normal',
+    },
+    medium: {
+      fontFamily: 'Poppins-Medium',
+      fontWeight: 'normal',
+    },
+    light: {
+      fontFamily: 'Poppins-Light',
+      fontWeight: 'normal',
+    },
+    thin: {
+      fontFamily: 'poppins-thin',
+      fontWeight: 'normal',
+    },
   },
-});
+};
+
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  fonts: configureFonts(fontConfig),
+  colors: {
+    ...DefaultTheme.colors,
+    surface: '#0091FF',
+    text: '#E9F1F7',
+  },
+};
+
+const App = () => {
+  return (
+    <>
+      <PaperProvider theme={theme}>
+        <Splash />
+      </PaperProvider>
+    </>
+  );
+};
+
+export default App;
