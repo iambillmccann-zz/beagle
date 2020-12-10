@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 50,
-    fontFamily: 'Poppins-SemiBold',
+    fontFamily: 'Poppins_600SemiBold',
     padding: 0,
     margin: 0,
   },
   tagLine: {
     fontSize: 15,
-    fontFamily: 'Poppins-Light',
+    fontFamily: 'Poppins_300Light',
     padding: 0,
     margin: 0,
   },

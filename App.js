@@ -6,8 +6,28 @@
  * @flow strict-local
  */
 
-import { useFonts } from 'expo-font';
 import React from 'react';
+import {
+  useFonts,
+  Poppins_100Thin,
+  Poppins_100Thin_Italic,
+  Poppins_200ExtraLight,
+  Poppins_200ExtraLight_Italic,
+  Poppins_300Light,
+  Poppins_300Light_Italic,
+  Poppins_400Regular,
+  Poppins_400Regular_Italic,
+  Poppins_500Medium,
+  Poppins_500Medium_Italic,
+  Poppins_600SemiBold,
+  Poppins_600SemiBold_Italic,
+  Poppins_700Bold,
+  Poppins_700Bold_Italic,
+  Poppins_800ExtraBold,
+  Poppins_800ExtraBold_Italic,
+  Poppins_900Black,
+  Poppins_900Black_Italic,
+} from '@expo-google-fonts/poppins';
 import {
   configureFonts,
   DefaultTheme,
@@ -18,19 +38,19 @@ import Splash from './components/splash';
 const fontConfig = {
   default: {
     regular: {
-      fontFamily: 'Poppins-Regular',
+      fontFamily: 'Poppins_400Regular_Italic',
       fontWeight: 'normal',
     },
     medium: {
-      fontFamily: 'Poppins-Medium',
+      fontFamily: 'Poppins_500Medium',
       fontWeight: 'normal',
     },
     light: {
-      fontFamily: 'Poppins-Light',
+      fontFamily: 'Poppins_300Light',
       fontWeight: 'normal',
     },
     thin: {
-      fontFamily: 'poppins-thin',
+      fontFamily: 'Poppins_100Thin',
       fontWeight: 'normal',
     },
   },
@@ -49,16 +69,24 @@ const theme = {
 
 const App = () => {
   let [fontsLoaded] = useFonts({
-    'Inter-Black': require('./assets/fonts/Poppins-Bold.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-BoldItalic.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-Italic.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-Light.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-LightItalic.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-Medium.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-Regular.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-SemiBold.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-SemiBoldItalic.ttf'),
-    'Inter-Black': require('./assets/fonts/Poppins-Thin.ttf'),
+    Poppins_100Thin,
+    Poppins_100Thin_Italic,
+    Poppins_200ExtraLight,
+    Poppins_200ExtraLight_Italic,
+    Poppins_300Light,
+    Poppins_300Light_Italic,
+    Poppins_400Regular,
+    Poppins_400Regular_Italic,
+    Poppins_500Medium,
+    Poppins_500Medium_Italic,
+    Poppins_600SemiBold,
+    Poppins_600SemiBold_Italic,
+    Poppins_700Bold,
+    Poppins_700Bold_Italic,
+    Poppins_800ExtraBold,
+    Poppins_800ExtraBold_Italic,
+    Poppins_900Black,
+    Poppins_900Black_Italic,
   })
 
   return (
