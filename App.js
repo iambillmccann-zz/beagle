@@ -6,6 +6,7 @@
  * @flow strict-local
  */
 
+import { useFonts } from 'expo-font';
 import React from 'react';
 import {
   configureFonts,
@@ -47,6 +48,19 @@ const theme = {
 };
 
 const App = () => {
+  let [fontsLoaded] = useFonts({
+    'Inter-Black': require('./assets/fonts/Poppins-Bold.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-BoldItalic.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-Italic.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-Light.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-LightItalic.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-Medium.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-Regular.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-SemiBold.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-SemiBoldItalic.ttf'),
+    'Inter-Black': require('./assets/fonts/Poppins-Thin.ttf'),
+  })
+
   return (
     <>
       <PaperProvider theme={theme}>
