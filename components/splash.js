@@ -1,19 +1,21 @@
 import * as React from "react";
-import { useFonts } from 'expo-font';
+import { useFonts } from "expo-font";
 import { Surface, Text } from "react-native-paper";
 import { StyleSheet } from "react-native";
 
 const Splash = () => {
-
-  let [fontsLoaded] = useFonts({
+  let [fontsLoaded, error] = useFonts({
     "Poppins-Light": require("../assets/fonts/Poppins-Light.ttf"),
     "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
   });
 
+  loadedText = fontsLoaded ? "Loaded is true" : "Loaded is false";
   return (
     <Surface style={styles.surface}>
       <Text style={styles.titleText}>PillSmart</Text>
       <Text style={styles.tagLine}>building healthy habits</Text>
+      <Text>Error = {error}</Text>
+      <Text style={{ fontFamily: 'Poppins-SemiBold' }} >{loadedText}</Text>
     </Surface>
   );
 };
