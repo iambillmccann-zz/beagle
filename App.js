@@ -17,16 +17,16 @@ import Splash from './components/splash';
 const fontConfig = {
   default: {
     regular: {
-      fontFamily: 'Roboto-400Regular',
+      fontFamily: 'Roboto',
     },
     medium: {
-      fontFamily: 'Roboto-500Medium',
+      fontFamily: 'Roboto Medium',
     },
     light: {
-      fontFamily: 'Roboto-300Light',
+      fontFamily: 'Roboto Light',
     },
     thin: {
-      fontFamily: 'Roboto-100thin',
+      fontFamily: 'Roboto Thin',
     },
   },
 };
