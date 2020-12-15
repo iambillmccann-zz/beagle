@@ -2,16 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Surface, Text } from "react-native-paper";
 import { StyleSheet } from "react-native";
 import { AppLoading } from "expo";
-import { useMyFonts } from "../contexts/useMyFonts";
+import {
+  useFonts,
+  Poppins_300Light,
+  Poppins_600SemiBold,
+} from '@expo-google-fonts/poppins';
 
-const Splash = () => {
-  let [fontsLoaded, error] = useMyFonts({
+function Splash() {
+  let [fontsLoaded] = useFonts({
     Poppins_300Light: "../assets/fonts/Poppins_300Light.ttf",
     Poppins_600SemiBold: "../assets/fonts/Poppins_600SemiBold.ttf",
   });
-
-  let fontSize = 24;
-  let paddingVertical = 6;
 
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -23,7 +24,7 @@ const Splash = () => {
       </Surface>
     );
   }
-};
+}
 
 const styles = StyleSheet.create({
   surface: {
