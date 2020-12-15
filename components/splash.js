@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 50,
-    fontFamily: "Poppins_600SemiBold",
+    fontFamily: "Roboto",
     padding: 0,
     margin: 0,
   },
   tagLine: {
     fontSize: 15,
-    fontFamily: "Poppins_300Light",
+    fontFamily: "Roboto",
     padding: 0,
     margin: 0,
   },
