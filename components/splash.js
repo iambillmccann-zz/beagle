@@ -1,32 +1,30 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { Surface, Text } from "react-native-paper";
 import { StyleSheet } from "react-native";
+import { AppLoading } from "expo";
 import {
   useFonts,
   Poppins_300Light,
   Poppins_600SemiBold,
-} from "@expo-google-fonts/poppins";
+} from '@expo-google-fonts/poppins';
 
-const Splash = () => {
+function Splash() {
   let [fontsLoaded] = useFonts({
-    Poppins_300Light,
-    Poppins_600SemiBold,
+    Poppins_300Light: "../assets/fonts/Poppins_300Light.ttf",
+    Poppins_600SemiBold: "../assets/fonts/Poppins_600SemiBold.ttf",
   });
 
-  if (!fontsLoaded)
-    return (
-      <Surface style={styles.surface}>
-        <Text>PillSmart. Building healthy habits.</Text>
-      </Surface>
-    );
-  else
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
     return (
       <Surface style={styles.surface}>
         <Text style={styles.titleText}>PillSmart</Text>
         <Text style={styles.tagLine}>building healthy habits</Text>
       </Surface>
     );
-};
+  }
+}
 
 const styles = StyleSheet.create({
   surface: {
@@ -36,13 +34,15 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 50,
-    fontFamily: "Poppins_600SemiBold",
+    // fontFamily: "Poppins_600SemiBold",
+    fontFamily: "Roboto",
     padding: 0,
     margin: 0,
   },
   tagLine: {
     fontSize: 15,
-    fontFamily: "Poppins_300Light",
+    // fontFamily: "Poppins_300Light",
+    fontFamily: "Roboto",
     padding: 0,
     margin: 0,
   },

@@ -17,20 +17,16 @@ import Splash from './components/splash';
 const fontConfig = {
   default: {
     regular: {
-      fontFamily: 'Poppins_400Regular_Italic',
-      fontWeight: 'normal',
+      fontFamily: 'Roboto',
     },
     medium: {
-      fontFamily: 'Poppins_500Medium',
-      fontWeight: 'normal',
+      fontFamily: 'Roboto Medium',
     },
     light: {
-      fontFamily: 'Poppins_300Light',
-      fontWeight: 'normal',
+      fontFamily: 'Roboto Light',
     },
     thin: {
-      fontFamily: 'Poppins_100Thin',
-      fontWeight: 'normal',
+      fontFamily: 'Roboto Thin',
     },
   },
 };
