@@ -20,13 +20,13 @@ const fontConfig = {
       fontFamily: 'Roboto',
     },
     medium: {
-      fontFamily: 'Roboto Medium',
+      fontFamily: 'Roboto',
     },
     light: {
-      fontFamily: 'Roboto Light',
+      fontFamily: 'Roboto',
     },
     thin: {
-      fontFamily: 'Roboto Thin',
+      fontFamily: 'Roboto',
     },
   },
 };
