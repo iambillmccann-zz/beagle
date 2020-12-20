@@ -14,22 +14,22 @@ import {
 } from 'react-native-paper';
 import Splash from './components/splash';
 
-const fontConfig = {
-  default: {
-    regular: {
-      fontFamily: 'Roboto',
-    },
-    medium: {
-      fontFamily: 'Roboto',
-    },
-    light: {
-      fontFamily: 'Roboto',
-    },
-    thin: {
-      fontFamily: 'Roboto',
-    },
-  },
-};
+// const fontConfig = {
+//   default: {
+//     regular: {
+//       fontFamily: 'Roboto',
+//     },
+//     medium: {
+//       fontFamily: 'Roboto',
+//     },
+//     light: {
+//       fontFamily: 'Roboto',
+//     },
+//     thin: {
+//       fontFamily: 'Roboto',
+//     },
+//   },
+// };
 
 const theme = {
   ...DefaultTheme,
