@@ -8,7 +8,7 @@ import {
   Poppins_600SemiBold,
 } from "@expo-google-fonts/poppins";
 
-function Splash() {
+function HelloWorld() {
   let [fontsLoaded] = useFonts({
     Poppins_300Light,
     Poppins_600SemiBold,
@@ -17,8 +17,8 @@ function Splash() {
   if (fontsLoaded) {
     return (
       <View style={styles.page}>
-        <Text style={styles.titleText}>PillSmart</Text>
-        <Text style={styles.tagLine}>building healthy habits</Text>
+        <Text style={styles.titleText}>Hello, world!</Text>
+        <Text style={styles.tagLine}>I think, therefore I am.</Text>
       </View>
     );
   } else {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     margin: 0,
   },
   tagLine: {
-    fontSize: 18,
+    fontSize: 15,
     fontFamily: "Poppins_300Light",
     textAlign: "center",
     width: 250,
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Splash;
+export default HelloWorld;
