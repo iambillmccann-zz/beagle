@@ -12,7 +12,7 @@ import {
   DefaultTheme,
   Provider as PaperProvider,
 } from 'react-native-paper';
-import Splash from './components/splash';
+import Splash from './src/components/splash';
 
 const fontConfig = {
   default: {
