@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { Surface, Text } from "react-native-paper";
-import { StyleSheet } from "react-native";
-// import { AppLoading } from "expo";
+import { Text } from "react-native-paper";
+import { StyleSheet, View } from "react-native";
+import { AppLoading } from "expo";
 import {
   useFonts,
   Poppins_300Light,
   Poppins_600SemiBold,
-} from '@expo-google-fonts/poppins';
+} from "@expo-google-fonts/poppins";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 function Splash() {
   let [fontsLoaded] = useFonts({
@@ -17,35 +18,35 @@ function Splash() {
 
   if (fontsLoaded) {
     return (
-      <Surface style={styles.surface}>
+      <View style={styles.page}>
         <Text style={styles.titleText}>PillSmart</Text>
         <Text style={styles.tagLine}>building healthy habits</Text>
-      </Surface>
+      </View>
     );
   } else {
-    return (
-      <Surface style={styles.surface}>
-        <Text style={{fontSize: 50}}>PillSmart</Text>
-      </Surface>
-    );
+    return <AppLoading />;
   }
 }
 
 const styles = StyleSheet.create({
-  surface: {
+  page: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#0091FF",
   },
   titleText: {
-    fontSize: 50,
+    fontSize: 46,
+    height: 60,
     fontFamily: "Poppins_600SemiBold",
     padding: 0,
     margin: 0,
   },
   tagLine: {
-    fontSize: 15,
+    fontSize: 18,
     fontFamily: "Poppins_300Light",
+    textAlign: "center",
+    width: 250,
     padding: 0,
     margin: 0,
   },
