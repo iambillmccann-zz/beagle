@@ -53,7 +53,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Splash" component={Splash} options={{headerShown: false}} />
-          <Stack.Screen name="Hello" component={HelloWorld} options={{headerShown: false}} />
+          <Stack.Screen name="HelloWorld" component={HelloWorld} options={{headerShown: false}} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

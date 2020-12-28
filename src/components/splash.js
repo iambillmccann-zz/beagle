@@ -1,6 +1,7 @@
-import React from "react";
+import React, { setState, useEffect } from "react";
 import { Text } from "react-native-paper";
 import { StyleSheet, View } from "react-native";
+import HelloWorld from "./helloWorld"; // My next screen
 import { AppLoading } from "expo";
 import {
   useFonts,
@@ -8,7 +9,15 @@ import {
   Poppins_600SemiBold,
 } from "@expo-google-fonts/poppins";
 
-function Splash() {
+function Splash(props) {
+  const { navigate } = props.navigation;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("HelloWorld");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   let [fontsLoaded] = useFonts({
     Poppins_300Light,
     Poppins_600SemiBold,
