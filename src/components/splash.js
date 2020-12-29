@@ -1,7 +1,6 @@
 import React, { setState, useEffect } from "react";
 import { Text } from "react-native-paper";
 import { StyleSheet, View } from "react-native";
-import HelloWorld from "./helloWorld"; // My next screen
 import { AppLoading } from "expo";
 import {
   useFonts,
