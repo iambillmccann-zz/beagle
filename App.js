@@ -17,6 +17,7 @@ import {
 } from "react-native-paper";
 import Splash from "./src/components/splash";
 import HelloWorld from "./src/components/helloWorld";
+import SignIn from "./src/components/auth/signin.js";
 
 const fontConfig = {
   default: {
@@ -53,6 +54,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Splash" component={Splash} options={{headerShown: false}} />
+          <Stack.Screen name="SignIn" component={SignIn} options={{headerShown: false}} />
           <Stack.Screen name="HelloWorld" component={HelloWorld} options={{headerShown: false}} />
         </Stack.Navigator>
       </NavigationContainer>

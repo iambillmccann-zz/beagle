@@ -9,19 +9,21 @@ import {
 } from "@expo-google-fonts/poppins";
 
 function Splash(props) {
+
+  // The useEffect hook handles automatic navigation to the sign-in page
   const { navigate } = props.navigation;
   useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("HelloWorld");
-    }, 3000);
+    const timer = setTimeout(() => { navigate("SignIn"); }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
+  // Load the fonts needed on this page
   let [fontsLoaded] = useFonts({
     Poppins_300Light,
     Poppins_600SemiBold,
   });
 
+  // Render the screen
   if (fontsLoaded) {
     return (
       <View style={styles.page}>

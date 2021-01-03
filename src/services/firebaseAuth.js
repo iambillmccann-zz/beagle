@@ -1,5 +1,5 @@
 // Firebase imports
-import firebase from "../firebase";
+import firebase from "../firebase.js";
 
 export const signup = (email, password) => {
   firebase
