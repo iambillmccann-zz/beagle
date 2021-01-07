@@ -15,9 +15,9 @@ import {
   DefaultTheme,
   Provider as PaperProvider,
 } from "react-native-paper";
-import Splash from "./src/components/splash";
-import HelloWorld from "./src/components/helloWorld";
-import SignIn from "./src/components/auth/signin.js";
+import Splash from "./src/screens/splash";
+import HelloWorld from "./src/screens/helloWorld";
+import SignIn from "./src/screens/signin.js";
 
 const fontConfig = {
   default: {
