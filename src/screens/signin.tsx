@@ -28,18 +28,6 @@ const SignIn = (props) => {
           <Text style={styles.headerTitle}>your Email</Text>
         </View>
         <View style={styles.form}>
-        <TextInput
-                label="Email"
-                returnKeyType="next"
-                value={email.value}
-                onChangeText={text => setEmail({ value: text, error: '' })}
-                error={!!email.error}
-                errorText={email.error}
-                autoCapitalize="none"
-                autoCompleteType="email"
-                textContentType="emailAddress"
-                keyboardType="email-address"
-            />
         </View>
       </View>
     );
