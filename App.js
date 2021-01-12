@@ -16,7 +16,7 @@ import {
 } from "react-native-paper";
 import Splash from "./src/screens/splash";
 import HelloWorld from "./src/screens/helloWorld";
-import SignIn from "./src/screens/signin.js";
+import SignIn from "./src/screens/signin.tsx";
 import theme from './src/theme'
 
 const Stack = createStackNavigator();
