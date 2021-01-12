@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { StyleSheet, View, Text } from "react-native";
-import { AppLoading } from "expo";
+import React, { useEffect } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import { AppLoading } from 'expo';
 import {
   useFonts,
   Poppins_300Light,
   Poppins_600SemiBold,
-} from "@expo-google-fonts/poppins";
+} from '@expo-google-fonts/poppins';
 
 const Splash = (props) => {
 
   // The useEffect hook handles automatic navigation to the sign-in page
   const { navigate } = props.navigation;
   useEffect(() => {
-    const timer = setTimeout(() => { navigate("SignIn"); }, 3000);
+    const timer = setTimeout(() => { navigate('SignIn'); }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -38,21 +38,23 @@ const Splash = (props) => {
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#0091FF",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#0091FF',
   },
   titleText: {
     fontSize: 46,
     height: 60,
-    fontFamily: "Poppins_600SemiBold",
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#E9F1F7',
     padding: 0,
     margin: 0,
   },
   tagLine: {
     fontSize: 18,
-    fontFamily: "Poppins_300Light",
-    textAlign: "center",
+    fontFamily: 'Poppins_300Light',
+    color: '#E9F1F7',
+    textAlign: 'center',
     width: 250,
     padding: 0,
     margin: 0,

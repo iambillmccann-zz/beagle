@@ -1,64 +1,46 @@
-import React from "react";
-import { useForm, Controller } from "react-hook-form";
-import { View, StyleSheet } from "react-native";
-import { Text, Button } from "react-native-paper";
-import { AppLoading } from "expo";
-import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
-import { TextInput } from "react-native-gesture-handler";
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
+import TextInput from 'react-native-paper';
+import { Button } from 'react-native-paper';
+import { AppLoading } from 'expo';
+import {
+  useFonts,
+  Poppins_400Regular,
+  Poppins_300Light,
+  Poppins_600SemiBold,
+} from '@expo-google-fonts/poppins';
 
-function SignIn(props) {
-  const { control, handleSubmit, errors } = useForm();
-  const onsubmit = (data) => {
-    console.log(data);
-  };
-
-  console.log(errors);
+const SignIn = (props) => {
 
   // Load the fonts needed on this page
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
+    Poppins_300Light,
+    Poppins_600SemiBold,
   });
 
   if (fontsLoaded) {
     return (
       <View style={styles.page}>
-          <Text style={styles.label}>EMAIL ADDRESS</Text>
-          <Controller
-            name="email"
-            control={control}
-            rules={{ required: "Please type your email address" }}
-            onFocus={() => {}}
-            render={(props) => (
-              <TextInput
-                {...props}
-                style={styles.input}
-                label="EMAIL ADDRESS"
-                placeholder="Type email address"
-                onChangeText={(value) => props.onChange(value)}
-              />
-            )}
-          />
-          <Text style={styles.label}>PASSWORD</Text>
-          <Controller name="password" control={control} />
-          <Controller
-            name="password"
-            control={control}
-            rules={{ required: "Please type password" }}
-            onFocus={() => {}}
-            render={(props) => (
-              <TextInput
-                {...props}
-                style={styles.input}
-                label="Password"
-                placeholder="Type password"
-                type="outlined"
-                onChangeText={(value) => props.onChange(value)}
-              />
-            )}
-          />
-          <Button type="contained" style={styles.button} onPress={handleSubmit(onsubmit)}>
-            Sign In
-          </Button>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>WELCOME</Text>
+          <Text style={styles.headerTitle}>Sign in with</Text>
+          <Text style={styles.headerTitle}>your Email</Text>
+        </View>
+        <View style={styles.form}>
+        <TextInput
+                label="Email"
+                returnKeyType="next"
+                value={email.value}
+                onChangeText={text => setEmail({ value: text, error: '' })}
+                error={!!email.error}
+                errorText={email.error}
+                autoCapitalize="none"
+                autoCompleteType="email"
+                textContentType="emailAddress"
+                keyboardType="email-address"
+            />
+        </View>
       </View>
     );
   } else {
@@ -69,27 +51,32 @@ function SignIn(props) {
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    alignItems: "baseline",
-    justifyContent: "center",
-    backgroundColor: "#0091FF",
+    backgroundColor: '#0091FF',
   },
-  label: {
-    margin: 20,
-    marginLeft: 0,
+  header: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    textAlign: 'left',
+    padding: 25,
   },
-  button: {
-    marginTop: 40,
-    color: "white",
-    backgroundColor: "#ec5990",
-    height: 40,
-    borderRadius: 4,
+  headerText: {
+    fontSize: 18,
+    fontFamily: 'Poppins_300Light',
+    color: '#E9F1F7',
+    paddingTop: 100,
   },
-  input: {
-    backgroundColor: "white",
-    height: 40,
-    padding: 10,
-    borderRadius: 4,
+  headerTitle: {
+    fontSize: 46,
+    height: 60,
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#E9F1F7',
   },
+  form: {
+    flex: 2,
+    alignItems: 'center',
+    backgroundColor: '#E9F1F7',
+    color: '#0091FF',
+  }
 });
 
 export default SignIn;
