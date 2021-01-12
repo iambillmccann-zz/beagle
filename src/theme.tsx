@@ -1,35 +1,28 @@
-import { DefaultTheme, configureFonts } from 'react-native-paper';
-// import {
-//     useFonts,
-//     Poppins_100Thin,
-//     Poppins_300Light,
-//     Poppins_400Regular,
-//     Poppins_500Medium,
-//   } from "@expo-google-fonts/poppins";
+import { DefaultTheme } from 'react-native-paper';
 
 const fontConfig = {
     default: {
-        regular: {
-            fontFamily: "Poppins_400Regular",
-        },
-        medium: {
-            fontFamily: "Poppins_500Medium",
-        },
-        light: {
-            fontFamily: "Poppins_300Light",
-        },
-        thin: {
-            fontFamily: "Poppins_100Thin",
-        },
+      regular: {
+        fontFamily: "Roboto",
+      },
+      medium: {
+        fontFamily: "Roboto",
+      },
+      light: {
+        fontFamily: "Roboto",
+      },
+      thin: {
+        fontFamily: "Roboto",
+      },
     },
-};
-
-export const theme = {
+  };
+  
+  export const theme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
-        primary: '#0091FF',
-        secondary: '#E9F1F7',
+        primary: '#3ab54a',
+        secondary: '#414757',
         error: '#f13a59',
         green: '#090',
         red: '#c00',
@@ -37,5 +30,4 @@ export const theme = {
         surface: "#0091FF",
         text: "#E9F1F7",
     },
-    fonts: configureFonts(fontConfig),
 };
