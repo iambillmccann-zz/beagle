@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AppLoading } from 'expo';
 import { TextInput } from 'react-native-paper';
 import { Button } from 'react-native-paper';
@@ -55,10 +55,13 @@ function SignIn(props) {
             onPress={() => navigate('HelloWorld')}>Forgot password?</Button>
         </View>
         <View style={styles.footer}>
-          <Button
-            mode='contained'
-            style={styles.button}
-            onPress={() => navigate('HelloWorld')}>Sign in</Button>
+          <TouchableOpacity style={styles.signin}>
+            <Button
+              mode='contained'
+              color='#0091FF'
+              style={styles.button}
+              onPress={() => navigate('HelloWorld')}>Sign in</Button>
+          </TouchableOpacity>
           <Button
             mode='text'
             style={[styles.button, styles.forgot]}
@@ -92,8 +95,8 @@ const styles = StyleSheet.create({
   },
   footer: {
     flex: 2,
-    justifyContent: 'flex-start',
-    textAlign: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: '#E9F1F7',
     color: '#0091FF',
   },
@@ -129,6 +132,11 @@ const styles = StyleSheet.create({
   },
   button: {
     marginVertical: 20,
+    paddingVertical: 10,
+    borderRadius: 30,
+  },
+  signin: {
+    width: 160,
   },
   forgot: {
     width: 240,
@@ -140,9 +148,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#0091FF',
   },
-  signin: {
-
-  }
 });
 
 export default SignIn;
