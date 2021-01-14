@@ -50,7 +50,8 @@ function SignIn(props) {
             onChangeText={password => setPassword(password)} />
           <Button
             mode='text'
-            style={styles.button}
+            style={[styles.button, styles.forgot]}
+            labelStyle={styles.forgotLabel}
             onPress={() => navigate('HelloWorld')}>Forgot password?</Button>
         </View>
         <View style={styles.footer}>
@@ -60,7 +61,8 @@ function SignIn(props) {
             onPress={() => navigate('HelloWorld')}>Sign in</Button>
           <Button
             mode='text'
-            style={styles.button}
+            style={[styles.button, styles.forgot]}
+            labelStyle={styles.forgotLabel}
             onPress={() => navigate('HelloWorld')}>Create account</Button>
         </View>
       </View>
@@ -109,28 +111,38 @@ const styles = StyleSheet.create({
   },
   formText: {
     fontSize: 15,
-    fontFamily: 'Poppins_400Regular',
+    fontFamily: 'Poppins_600SemiBold',
     color: '#0091FF',
     textAlign: 'left',
     padding: 20,
     paddingBottom: 0,
     marginTop: 10,
+    marginHorizontal: 10,
   },
   formInput: {
     fontSize: 15,
-    fontFamily: 'Poppins_400Regular',
+    fontFamily: 'Poppins_600SemiBold',
     color: '#0091FF',
     backgroundColor: '#D8EEFF',
-    marginLeft: 10,
-    marginRight: 10,
-    borderRadius: 1,
+    marginHorizontal: 20,
+    borderColor: '#0091FF',
   },
   button: {
-    fontSize: 15,
-    fontFamily: 'Poppins_400Regular',
-    color: '#0019FF',
-    margin: 20,
+    marginVertical: 20,
   },
+  forgot: {
+    width: 240,
+  },
+  forgotLabel: {
+    fontSize: 15,
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#0091FF',
+    borderBottomWidth: 1,
+    borderBottomColor: '#0091FF',
+  },
+  signin: {
+
+  }
 });
 
 export default SignIn;
