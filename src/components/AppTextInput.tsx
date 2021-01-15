@@ -5,8 +5,6 @@ import { theme } from '../theme';
 import { AppLoading } from 'expo';
 import {
     useFonts,
-    Poppins_400Regular,
-    Poppins_300Light,
     Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
 
@@ -16,8 +14,6 @@ const AppTextInput = ({ labelText, errorText, ...props }: Props) => {
 
     // Load the fonts needed on this page
     let [fontsLoaded] = useFonts({
-        Poppins_400Regular,
-        Poppins_300Light,
         Poppins_600SemiBold,
     });
 

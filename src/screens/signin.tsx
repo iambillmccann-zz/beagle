@@ -3,7 +3,8 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AppLoading } from 'expo';
 import { TextInput } from 'react-native-paper';
 import { Button } from 'react-native-paper';
-import AppTextInput from '../components/AppTextInput'
+import AppTextInput from '../components/AppTextInput';
+import AppTextButton from '../components/AppTextButton';
 import {
   useFonts,
   Poppins_400Regular,
@@ -43,11 +44,9 @@ const SignIn = (props) => {
             value={password}
             placeholder='Type password'
             onChangeText={email => setEmail(password)} />
-          <Button
-            mode='text'
-            style={[styles.button, styles.forgot]}
-            labelStyle={styles.forgotLabel}
-            onPress={() => navigate('HelloWorld')}>Forgot password?</Button>
+          <AppTextButton
+            labelText='Forgot password?'
+            onPress={() => navigate('HelloWorld')} />
         </View>
         <View style={styles.footer}>
           <TouchableOpacity style={styles.signin}>
@@ -57,11 +56,9 @@ const SignIn = (props) => {
               style={styles.button}
               onPress={() => navigate('HelloWorld')}>Sign in</Button>
           </TouchableOpacity>
-          <Button
-            mode='text'
-            style={[styles.button, styles.forgot]}
-            labelStyle={styles.forgotLabel}
-            onPress={() => navigate('HelloWorld')}>Create account</Button>
+          <AppTextButton
+            labelText='Create account'
+            onPress={() => navigate('HelloWorld')} />
         </View>
       </View>
     );
@@ -114,16 +111,6 @@ const styles = StyleSheet.create({
   },
   signin: {
     width: 160,
-  },
-  forgot: {
-    width: 240,
-  },
-  forgotLabel: {
-    fontSize: 15,
-    fontFamily: 'Poppins_600SemiBold',
-    color: '#0091FF',
-    borderBottomWidth: 1,
-    borderBottomColor: '#0091FF',
   },
 });
 
