@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AppLoading } from 'expo';
 import { TextInput } from 'react-native-paper';
 import { Button } from 'react-native-paper';
+import AppTextInput from '../components/AppTextInput'
 import {
   useFonts,
   Poppins_400Regular,
@@ -10,7 +11,7 @@ import {
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
 
-function SignIn(props) {
+const SignIn = (props) => {
 
   const { navigate } = props.navigation;
   const [email, setEmail] = useState('');
@@ -32,22 +33,16 @@ function SignIn(props) {
           <Text style={styles.headerTitle}>your Email</Text>
         </View>
         <View style={styles.form}>
-          <Text style={styles.formText}>EMAIL ADDRESS</Text>
-          <TextInput
-            mode='outlined'
+          <AppTextInput
+            labelText='EMAIL ADDRESS'
             value={email}
             placeholder='Type email address'
-            underlineColor='#0091FF'
-            style={styles.formInput}
             onChangeText={email => setEmail(email)} />
-          <Text style={styles.formText}>PASSWORD</Text>
-          <TextInput
-            mode='outlined'
+          <AppTextInput
+            labelText='PASSWORD'
             value={password}
             placeholder='Type password'
-            underlineColor='#0091FF'
-            style={styles.formInput}
-            onChangeText={password => setPassword(password)} />
+            onChangeText={email => setEmail(password)} />
           <Button
             mode='text'
             style={[styles.button, styles.forgot]}
@@ -111,24 +106,6 @@ const styles = StyleSheet.create({
     height: 60,
     fontFamily: 'Poppins_600SemiBold',
     color: '#E9F1F7',
-  },
-  formText: {
-    fontSize: 15,
-    fontFamily: 'Poppins_600SemiBold',
-    color: '#0091FF',
-    textAlign: 'left',
-    padding: 20,
-    paddingBottom: 0,
-    marginTop: 10,
-    marginHorizontal: 10,
-  },
-  formInput: {
-    fontSize: 15,
-    fontFamily: 'Poppins_600SemiBold',
-    color: '#0091FF',
-    backgroundColor: '#D8EEFF',
-    marginHorizontal: 20,
-    borderColor: '#0091FF',
   },
   button: {
     marginVertical: 20,
