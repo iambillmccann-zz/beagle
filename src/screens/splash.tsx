@@ -1,6 +1,5 @@
-import React from "react";
-import { Text } from "react-native-paper";
-import { StyleSheet, View } from "react-native";
+import React, { useEffect } from "react";
+import { StyleSheet, View, Text } from "react-native";
 import { AppLoading } from "expo";
 import {
   useFonts,
@@ -8,17 +7,27 @@ import {
   Poppins_600SemiBold,
 } from "@expo-google-fonts/poppins";
 
-function HelloWorld() {
+const Splash = (props) => {
+
+  // The useEffect hook handles automatic navigation to the sign-in page
+  const { navigate } = props.navigation;
+  useEffect(() => {
+    const timer = setTimeout(() => { navigate("SignIn"); }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Load the fonts needed on this page
   let [fontsLoaded] = useFonts({
     Poppins_300Light,
     Poppins_600SemiBold,
   });
 
+  // Render the screen
   if (fontsLoaded) {
     return (
       <View style={styles.page}>
-        <Text style={styles.titleText}>Hello, world!</Text>
-        <Text style={styles.tagLine}>I think, therefore I am.</Text>
+        <Text style={styles.titleText}>PillSmart</Text>
+        <Text style={styles.tagLine}>building healthy habits</Text>
       </View>
     );
   } else {
@@ -37,12 +46,14 @@ const styles = StyleSheet.create({
     fontSize: 46,
     height: 60,
     fontFamily: "Poppins_600SemiBold",
+    color: '#E9F1F7',
     padding: 0,
     margin: 0,
   },
   tagLine: {
-    fontSize: 15,
+    fontSize: 18,
     fontFamily: "Poppins_300Light",
+    color: '#E9F1F7',
     textAlign: "center",
     width: 250,
     padding: 0,
@@ -50,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HelloWorld;
+export default Splash;

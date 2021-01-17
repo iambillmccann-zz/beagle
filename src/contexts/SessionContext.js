@@ -2,7 +2,7 @@
 import React, { createContext, useReducer, useContext, useEffect } from "react";
 
 // Firebase imports
-import firebase from "../firebase";
+import firebase from "../firebase.js";
 
 // My imports
 import { SessionReducer } from "../reducers/SessionReducer";
