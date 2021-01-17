@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AppLoading } from 'expo';
-import { TextInput } from 'react-native-paper';
-import { Button } from 'react-native-paper';
+import { Button, Surface } from 'react-native-paper';
 import AppTextInput from '../components/AppTextInput';
 import AppTextButton from '../components/AppTextButton';
 import {
@@ -28,11 +27,11 @@ const SignIn = (props) => {
   if (fontsLoaded) {
     return (
       <View style={styles.page}>
-        <View style={styles.header}>
+        <Surface style={styles.header}>
           <Text style={styles.headerText}>WELCOME</Text>
           <Text style={styles.headerTitle}>Sign in with</Text>
           <Text style={styles.headerTitle}>your Email</Text>
-        </View>
+        </Surface>
         <View style={styles.form}>
           <AppTextInput
             labelText='EMAIL ADDRESS'
@@ -58,7 +57,7 @@ const SignIn = (props) => {
           </TouchableOpacity>
           <AppTextButton
             labelText='Create account'
-            onPress={() => navigate('HelloWorld')} />
+            onPress={() => navigate('SignUp')} />
         </View>
       </View>
     );
@@ -70,13 +69,13 @@ const SignIn = (props) => {
 const styles = StyleSheet.create({
   page: {
     flex: 7,
-    backgroundColor: '#0091FF',
   },
   header: {
     flex: 2,
     justifyContent: 'flex-start',
     textAlign: 'left',
     padding: 25,
+    backgroundColor: '#0091FF',
   },
   form: {
     flex: 3,
