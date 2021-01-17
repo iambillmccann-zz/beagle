@@ -10,7 +10,7 @@ import {
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
 
-const Today = (props) => {
+const Setup1 = (props) => {
 
   const { navigate } = props.navigation;
 
@@ -25,23 +25,19 @@ const Today = (props) => {
     return (
       <View style={styles.page}>
         <Surface style={styles.header}>
-          <View style={{flexDirection: 'row'}}>
-            <Text style={styles.headerGreeting}>Hi, </Text>
-            <Text style={[styles.headerGreeting, {fontFamily: 'Poppins_300Light'}]}>Bill</Text>
-          </View>
-          <Text style={styles.headerText}>COMING UP</Text>
-          <Text style={styles.headerTitle}>Adderall</Text>
-          <Text style={styles.headerGreeting}>15 mg at 2:00 PM</Text>
+          <Text style={styles.headerGreeting}>&lt;</Text>
+          <Text style={styles.headerText}>SETUP REGIMEN</Text>
+          <Text style={styles.headerGreeting}>Add Medication</Text>
         </Surface>
         <View style={styles.form}>
           <Text style={styles.titleText}>Hello, world!</Text>
-          <Text style={styles.tagLine}>The Today home page goes here.</Text>
-          <TouchableOpacity style={{ width: 220, marginVertical: 50 }}>
+          <Text style={styles.tagLine}>The Setup page 1 of 3 goes here.</Text>
+          <TouchableOpacity style={{ width: 220, marginVertical: 25 }}>
             <Button
               mode='contained'
               color='#0091FF'
               style={styles.button}
-              onPress={() => navigate('Meds')}>Meds</Button>
+              onPress={() => navigate('Today')}>Today</Button>
             <Button
               mode='contained'
               color='#0091FF'
@@ -52,6 +48,11 @@ const Today = (props) => {
               color='#0091FF'
               style={styles.button}
               onPress={() => navigate('HelloWorld')}>More</Button>
+            <Button
+              mode='contained'
+              color='#0091FF'
+              style={styles.button}
+              onPress={() => navigate('Setup2')}>Step 2 of 3</Button>
           </TouchableOpacity>
         </View>
       </View>
@@ -67,34 +68,26 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 2,
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: 'center',
-    padding: 40,
+    alignItems: "flex-start",
+    justifyContent: "flex-end",
     backgroundColor: '#0091FF',
+    padding: 30,
+  },
+  headerText: {
+    fontSize: 15,
+    fontFamily: 'Poppins_300Light',
+    color: '#E9F1F7',
+  },
+  headerGreeting: {
+    fontSize: 24,
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#E9F1F7',
   },
   form: {
     flex: 5,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: '#E9F1F7',
-  },
-  headerText: {
-    fontSize: 15,
-    fontFamily: 'Poppins_300Light',
-    color: '#E9F1F7',
-    marginVertical: 20,
-  },
-  headerGreeting: {
-    fontSize: 24,
-    fontFamily: 'Poppins_500Medium',
-    color: '#E9F1F7',
-  },
-  headerTitle: {
-    fontSize: 40,
-    height: 60,
-    fontFamily: 'Poppins_600SemiBold',
-    color: '#E9F1F7',
   },
   titleText: {
     fontSize: 46,
@@ -120,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Today;
+export default Setup1;
