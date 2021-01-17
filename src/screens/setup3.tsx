@@ -10,7 +10,7 @@ import {
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
 
-const Setup2 = (props) => {
+const Setup3 = (props) => {
 
   const { navigate } = props.navigation;
 
@@ -26,12 +26,12 @@ const Setup2 = (props) => {
       <View style={styles.page}>
         <Surface style={styles.header}>
           <Text style={styles.headerGreeting}>&lt;</Text>
-          <Text style={styles.headerText}>SETUP REGIMEN</Text>
-          <Text style={styles.headerGreeting}>Add Schedule</Text>
+          <Text style={styles.headerText}>CONFIRM REGIMEN</Text>
+          <Text style={styles.headerGreeting}>Send to Dispenser</Text>
         </Surface>
         <View style={styles.form}>
           <Text style={styles.titleText}>Hello, world!</Text>
-          <Text style={styles.tagLine}>The Setup page 2 of 3 goes here.</Text>
+          <Text style={styles.tagLine}>The Setup page 3 of 3 goes here.</Text>
           <TouchableOpacity style={{ width: 220, marginVertical: 25 }}>
             <Button
               mode='contained'
@@ -52,7 +52,7 @@ const Setup2 = (props) => {
               mode='contained'
               color='#0091FF'
               style={styles.button}
-              onPress={() => navigate('Setup3')}>Save Schedule</Button>
+              onPress={() => navigate('Saving')}>Save on Dispenser</Button>
           </TouchableOpacity>
         </View>
       </View>
@@ -113,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Setup2;
+export default Setup3;

@@ -10,7 +10,7 @@ import {
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
 
-const Setup2 = (props) => {
+const Stats = (props) => {
 
   const { navigate } = props.navigation;
 
@@ -25,15 +25,14 @@ const Setup2 = (props) => {
     return (
       <View style={styles.page}>
         <Surface style={styles.header}>
-          <Text style={styles.headerGreeting}>&lt;</Text>
-          <Text style={styles.headerText}>SETUP REGIMEN</Text>
-          <Text style={styles.headerGreeting}>Add Schedule</Text>
+          <Text style={styles.headerText}>MONTHLY REPORT</Text>
+          <Text style={styles.headerGreeting}>Adherence</Text>
         </Surface>
         <View style={styles.form}>
           <Text style={styles.titleText}>Hello, world!</Text>
-          <Text style={styles.tagLine}>The Setup page 2 of 3 goes here.</Text>
-          <TouchableOpacity style={{ width: 220, marginVertical: 25 }}>
-            <Button
+          <Text style={styles.tagLine}>The Stats page goes here.</Text>
+          <TouchableOpacity style={{ width: 220, marginVertical: 50 }}>
+          <Button
               mode='contained'
               color='#0091FF'
               style={styles.button}
@@ -42,17 +41,12 @@ const Setup2 = (props) => {
               mode='contained'
               color='#0091FF'
               style={styles.button}
-              onPress={() => navigate('Stats')}>Stats</Button>
+              onPress={() => navigate('Meds')}>Meds</Button>
             <Button
               mode='contained'
               color='#0091FF'
               style={styles.button}
               onPress={() => navigate('HelloWorld')}>More</Button>
-            <Button
-              mode='contained'
-              color='#0091FF'
-              style={styles.button}
-              onPress={() => navigate('Setup3')}>Save Schedule</Button>
           </TouchableOpacity>
         </View>
       </View>
@@ -73,21 +67,28 @@ const styles = StyleSheet.create({
     backgroundColor: '#0091FF',
     padding: 30,
   },
-  headerText: {
-    fontSize: 15,
-    fontFamily: 'Poppins_300Light',
-    color: '#E9F1F7',
-  },
-  headerGreeting: {
-    fontSize: 24,
-    fontFamily: 'Poppins_600SemiBold',
-    color: '#E9F1F7',
-  },
   form: {
     flex: 5,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: '#E9F1F7',
+  },
+  headerText: {
+    fontSize: 15,
+    fontFamily: 'Poppins_300Light',
+    color: '#E9F1F7',
+    marginVertical: 20,
+  },
+  headerGreeting: {
+    fontSize: 24,
+    fontFamily: 'Poppins_500Medium',
+    color: '#E9F1F7',
+  },
+  headerTitle: {
+    fontSize: 40,
+    height: 60,
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#E9F1F7',
   },
   titleText: {
     fontSize: 46,
@@ -113,4 +114,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Setup2;
+export default Stats;

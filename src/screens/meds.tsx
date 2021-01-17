@@ -41,7 +41,7 @@ const Meds = (props) => {
               mode='contained'
               color='#0091FF'
               style={styles.button}
-              onPress={() => navigate('HelloWorld')}>Stats</Button>
+              onPress={() => navigate('Stats')}>Stats</Button>
             <Button
               mode='contained'
               color='#0091FF'
