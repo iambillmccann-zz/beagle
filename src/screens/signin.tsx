@@ -53,7 +53,7 @@ const SignIn = (props) => {
               mode='contained'
               color='#0091FF'
               style={styles.button}
-              onPress={() => navigate('HelloWorld')}>Sign in</Button>
+              onPress={() => navigate('Today')}>Sign in</Button>
           </TouchableOpacity>
           <AppTextButton
             labelText='Create account'

@@ -5,15 +5,19 @@ import { Surface, Button } from 'react-native-paper';
 import {
   useFonts,
   Poppins_300Light,
+  Poppins_400Regular,
+  Poppins_500Medium,
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
 
-const SignUp = (props) => {
+const Today = (props) => {
 
   const { navigate } = props.navigation;
 
   let [fontsLoaded] = useFonts({
     Poppins_300Light,
+    Poppins_400Regular,
+    Poppins_500Medium,
     Poppins_600SemiBold,
   });
 
@@ -21,19 +25,33 @@ const SignUp = (props) => {
     return (
       <View style={styles.page}>
         <Surface style={styles.header}>
-          <Text style={styles.headerText}>LET'S GET STARTED</Text>
-          <Text style={styles.headerTitle}>Create</Text>
-          <Text style={styles.headerTitle}>Account</Text>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={styles.headerGreeting}>Hi, </Text>
+            <Text style={[styles.headerGreeting, {fontFamily: 'Poppins_300Light'}]}>Bill</Text>
+          </View>
+          <Text style={styles.headerText}>COMING UP</Text>
+          <Text style={styles.headerTitle}>Adderall</Text>
+          <Text style={styles.headerGreeting}>15 mg at 2:00 PM</Text>
         </Surface>
         <View style={styles.form}>
           <Text style={styles.titleText}>Hello, world!</Text>
-          <Text style={styles.tagLine}>The sign-up form goes here.</Text>
-          <TouchableOpacity style={{width: 220, marginVertical: 50}}>
+          <Text style={styles.tagLine}>The Today home page goes here.</Text>
+          <TouchableOpacity style={{ width: 220, marginVertical: 50 }}>
             <Button
               mode='contained'
               color='#0091FF'
               style={styles.button}
-              onPress={() => navigate('Today')}>Create Account</Button>
+              onPress={() => navigate('HelloWorld')}>Meds</Button>
+            <Button
+              mode='contained'
+              color='#0091FF'
+              style={styles.button}
+              onPress={() => navigate('HelloWorld')}>Stats</Button>
+            <Button
+              mode='contained'
+              color='#0091FF'
+              style={styles.button}
+              onPress={() => navigate('HelloWorld')}>More</Button>
           </TouchableOpacity>
         </View>
       </View>
@@ -49,9 +67,10 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 2,
-    justifyContent: 'flex-start',
-    textAlign: 'left',
-    padding: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: 'center',
+    padding: 40,
     backgroundColor: '#0091FF',
   },
   form: {
@@ -64,7 +83,12 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: 'Poppins_300Light',
     color: '#E9F1F7',
-    paddingTop: 100,
+    marginVertical: 20,
+  },
+  headerGreeting: {
+    fontSize: 24,
+    fontFamily: 'Poppins_500Medium',
+    color: '#E9F1F7',
   },
   headerTitle: {
     fontSize: 40,
@@ -96,4 +120,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignUp;
+export default Today;
