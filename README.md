@@ -42,8 +42,18 @@ The database beckend is permanent storage. There is no business logic or code in
 - Docker Desktop version 3.0.4 or higher
 - Node version 14.15 or higher
 - NPM version 6.0 or higher
+- EXPO cli version 4.0 or higher
 - __Recommended IDE__ VSCode
 
+#### Installation
+
+1. Clone the repository: `git clone https://github.com/iambillmccann/beagle.git`
+2. Change the directory: `cd pillsmart-app`
+3. Install expo: `npm -g install expo-cli`
+4. Install dependencies: `npm install`
+5. Remove the additional font folder: `rm -rf ./node_modules/expo/node_modules/expo-font/`
+
+#### The poppins font
 
 If the Poppins font is not recognized, then run the following command from the terminal ...
 ```
